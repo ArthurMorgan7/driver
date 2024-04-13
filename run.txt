@@ -1,0 +1,6 @@
+source ./devel/setup.bash
+
+# 1.启动 zed2 相机
+roslaunch zed_wrapper zed2.launch
+
+
