@@ -26,7 +26,7 @@
     <param name="use_time_service" value="$(arg use_time_service)"/>
     <param name="use_gps" value="false"/>
     <param name="echo_num" value="0"/>
-    <param name="publish_laserscan" value="false"/>
-    <param name="channel_num" value="128"/>
+    <param name="publish_laserscan" value="true"/>
+    <param name="channel_num" value="64"/>
   </node>
 </launch>
