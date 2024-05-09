@@ -10,6 +10,9 @@ roslaunch lslidar_driver lslidar_ch128x1.launch
 # 3.启动Xsense IMU
 roslaunch xsens_mti_driver xsens_mti_node.launch 
 
+# 4.启动 GPS
+roslaunch gps start.launch
+
 # 记录数据
 cd /home/arthur/Music
-rosbag record -a /imu/data /lslidar_point_cloud /scan /zed2/zed_node/left/image_rect_color /zed2/zed_node/right/image_rect_color
+rosbag record -a /imu/data /lslidar_point_cloud /scan /zed2/zed_node/left/image_rect_color /zed2/zed_node/right/image_rect_color /RTK /RTK_LLA

@@ -33,6 +33,9 @@ int main(int argc, char **argv)
             pub_rtk.publish(rtk);
             time_old = floor(time_neg);
         }
+        else{
+            cout << "error" << endl;
+        }
         loop_rate.sleep();
     }
     return 0;
@@ -51,7 +54,7 @@ void headingCallback(const gps::HEADINGConstPtr& msg)
 {
     time_neg = msg->stamp;
     rtk.diff_age = msg->heading;
-    cout << "msg->heading" << msg->heading  <<endl;
+    //cout << "msg->heading" << msg->heading  <<endl;
     // 如果顺为正
     //if(msg->heading <  180){
     //    rtk.diff_age = - msg->heading;

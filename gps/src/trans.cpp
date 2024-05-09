@@ -43,7 +43,7 @@ int main(int argc, char** argv)
         {
             msg.data = ser.read(ser.available());
             msg_pub.publish(msg);
-            ROS_INFO("%s", msg.data.c_str());
+            //ROS_INFO("%s", msg.data.c_str());
         }    
         loop_rate.sleep();
     }

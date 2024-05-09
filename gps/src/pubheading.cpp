@@ -69,6 +69,7 @@ int main(int argc, char** argv)
                     gps::HEADING GPS_data;
                     GPS_data.stamp = ros::Time::now().toSec();
                     GPS_data.heading = heading;
+                    cout << heading <<endl;
                     GPS_pub.publish(GPS_data);
                     strRece = strRece.substr(end+2);
                 }
